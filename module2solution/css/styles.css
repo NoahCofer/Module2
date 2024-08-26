@@ -1,0 +1,113 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #000000, #434343);
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000000;
+    padding: 15px;
+    text-align: center;
+}
+
+    header h1 {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5em;
+    }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.section {
+    border-radius: 8px;
+    padding: 60px 20px 20px;
+    margin: 15px 0;
+    position: relative;
+    flex: 1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #333;
+    text-align: center;
+}
+
+    .section:hover {
+        transform: scale(1.05);
+    }
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+#chicken {
+    background-color: #D2B48C;
+}
+
+    #chicken .section-title {
+        background-color: #8B4513;
+    }
+
+#beef {
+    background-color: #CD5C5C;
+}
+
+    #beef .section-title {
+        background-color: #8B0000;
+    }
+
+#sushi {
+    background-color: #98FB98;
+}
+
+    #sushi .section-title {
+        background-color: #2E8B57;
+    }
+
+@media (max-width: 991px) and (min-width: 768px) {
+    #chicken, #beef {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    #sushi {
+        flex: 0 0 100%;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .section {
+        margin: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        flex: 0 0 100%;
+        margin-bottom: 15px;
+    }
+
+    .section {
+        padding-top: 60px;
+    }
+}
